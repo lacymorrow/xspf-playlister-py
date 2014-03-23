@@ -23,7 +23,7 @@ def scanMedia(path):
 	media = [os.path.join(root, x) for root, dirs, files in os.walk(path) for x in files if re.match(types, x)]
 	
 	for file in media:
-		print file
+		#print file
 		file = os.path.abspath(file).rstrip('\0')
 		name, ext = os.path.splitext(file)
 		type = checkType(ext).rstrip('\0')
