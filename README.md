@@ -15,3 +15,8 @@ By default, the [hsaudiotag](https://github.com/hsoft/hsaudiotag/) library is us
 
 ## Usage:
 `python playlister.py /absolute/path/to/media/ > playlist.xspf`
+
+
+## License
+
+[MIT](http://opensource.org/licenses/MIT) © [Lacy Morrow](http://lacymorrow.com)
