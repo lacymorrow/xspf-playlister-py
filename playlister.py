@@ -6,17 +6,79 @@ from hsaudiotag import auto
 #import fnmatch
 #import ntpath
 
+# /**
+#  * This class reads a directory of media files and generates a
+#  * XML/XSPF formatted playlist
+#  *
+#  * @author     Lacy Morrow
+#  * @website    www.lacymorrow.com
+#  * @copyright  Copyright (c) 2013 Lacy Morrow. All rights reserved.
+# * @license    MIT
+# */
+
+########################
 # playlister.py
 # Mark Talbert & Lacy Morrow
-# Given a root directory, this script will build an XSPF playlist
+# hsaudiotag
+########################
 
+####################
+###   SETTINGS   ###
+####################
+
+# USE ID3 TAGS TO AUTOMATICALLY FILL TRACK INFORMATION
+# (as opposed to specifying in the directory structure, e.g. 'media/artist/album/track.mp3')
+id3 = true;
+
+# CACHE PLAYLIST - seconds to persist cache before rescan, 0 for no cache
+cache = 3600;
+
+# CACHE PLAYLIST FILE - path/url - relative
+playlist = 'xplay_generated_playlist.xml';
+
+# RETRIEVE ARTWORK - boolean
+artwork = true;
+
+# MEDIA DIRECTORY - path/url - relative
+media = 'media';
+
+#####################################
+###  DO NOT EDIT BELOW THIS LINE  ###
+#####################################
+
+
+#####################################
+###   BEGIN PLAYLIST GENERATION   ###
+#####################################
+'''
+def scanMedia(rootdir):
+
+for root, subFolders, files in os.walk(rootdir):
+    outfileName = os.path.join(root, "py-outfile.txt")
+    print "outfileName is " + outfileName
+    with open( outfileName, 'w' ) as folderOut:
+        for folder in subFolders:
+            print "%s has subdirectory %s" % (root, folder)
+
+        for filename in files:
+            filePath = os.path.join(root, filename)
+
+            with open( filePath, 'r' ) as f:
+                toWrite = f.read()
+                folderOut.write("The file %s contains %s" % (filePath, toWrite))
+                folderOut.write( toWrite )
+f = []
+for (dirpath, dirnames, filenames) in walk(mypath):
+    f.extend(filenames)
+    breakos.path.join(dirpath, name)
+'''
+# Given a root directory, this script will build an XSPF playlist
 def scanMedia(path):
-	#"main" routine
 	confirmExistence(path)
 	formatPath(path)
 	playArr = []
 	imgArr = []
-	types = ['*.mp3']#,'*.wav','*.ogg','*.mp4','*.webm','*.ogv','*.jpg','*.jpeg','*.gif','*.png']
+	types = ['*.mp3','*.wav','*.ogg','*.mp4','*.webm','*.ogv','*.jpg','*.jpeg','*.gif','*.png']
 	types = r'|'.join([fnmatch.translate(x) for x in types])
 
 	#mp3s = [os.path.join(root, i) for root, dirs, files in os.walk(path) for i in files if i[-3:] == "mp3"] #preliminary functionality
