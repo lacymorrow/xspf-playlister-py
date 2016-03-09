@@ -1,7 +1,7 @@
 xspf-playlister 0.0.1
 ==================
 
-Generate an XSPF playlist file for audio and video files using Python. 
+Generate an XSPF playlist file for audio and video files using Python 2. 
 
 Use it on the command line once or as a dead-simple way to keep a playlist on the internet up to date. 
 
