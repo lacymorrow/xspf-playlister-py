@@ -5,7 +5,7 @@ xspf-playlister 0.1.0
 
 Generate an XSPF playlist file for audio and video files using PHP.
 
-A Python implementation of the XSPF Playlist Generator: https://github.com/lacymorrow/xspf-playlister-php
+_A PHP implementation of the XSPF Playlist Generator ported here: https://github.com/lacymorrow/xspf-playlister-php_
 
 Created for: [lacymorrow/xspf-jukebox](https://github.com/lacymorrow/xspf-jukebox).
 
