@@ -1,7 +1,7 @@
 # xspf-playlister-py
 
 
-> *It actually works pretty well!*
+> Media files -> .xspf playlists
 
 Generate an XSPF playlist file for audio and video files using Python 2. Use it on the command line once or as a dead-simple way to keep a playlist on the internet up to date. 
 
