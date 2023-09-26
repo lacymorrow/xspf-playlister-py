@@ -1,4 +1,4 @@
-xspf-playlister-py
+# xspf-playlister-py
 
 
 > *It actually works pretty well!*
