@@ -1,3 +1,6 @@
+> [!WARNING]
+> This project is unmaintained.
+
 # xspf-playlister-py
 
 
